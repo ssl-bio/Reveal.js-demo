@@ -14,18 +14,19 @@
 # #+Creator: Laboratory of Plant Nutrition and Fertilizers
 #+Date: 2022-02-07
 
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
 #+REVEAL_HLEVEL: 2
 #+REVEAL_HEAD_PREAMBLE: <meta name="description" content="Utokyo PhD Thesis Presentation">
 #+REVEAL_POSTAMBLE: <p>Created by ssl</p>
 #+REVEAL_INIT_OPTIONS: width:1200, height:800, minScale:0.2, maxScale:2.5, transition: 'fade', progress:true, history:true, center:true, mouseWheel:false, menu:{themes:true, transitions:true, markers:true, custom: false, hideMissingTitles:true}, customcontrols:{controls:[{id:'toggle-overview', title:'Toggleoverview(O)', icon:'<i class="fa fa-th"></i>', action:'Reveal.toggleOverview();'}, {icon:'<i class="fa fa-message"></i>', title:'Toggle iframe legend', action:'ilegend()'}]}, pointer: {key: "q", color: "red", pointerSize: 16, alwaysVisible: false, tailLength: 10}
-#+REVEAL_THEME: moon
+#+REVEAL_THEME: dracula
 #+OPTIONS: num:nil toc:nil
 
 #+REVEAL_EXTRA_CSS: ./plugin_extra/customcontrols/style.css
 #+REVEAL_EXTRA_CSS: ./UT/css/icustom.css
 #+REVEAL_EXTRA_CSS: ./plugin_extra/drawer/drawer.css
 #+REVEAL_EXTRA_CSS: ./plugin_extra/pointer/pointer.css
-#+REVEAL_EXTRA_CSS: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css
+#+REVEAL_EXTRA_CSS: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css
 #+REVEAL_EXTERNAL_PLUGINS: (RevealMenu . "./plugin_extra/menu/menu.js") 
 #+REVEAL_EXTERNAL_PLUGINS: (RevealCustomControls . "./plugin_extra/customcontrols/plugin.js")
 #+REVEAL_EXTERNAL_PLUGINS: (RevealDrawer . "./plugin_extra/drawer/drawer.js")
@@ -38,10 +39,12 @@
 :REVEAL_EXTRA_ATTR: data-autoslide="1500"
 :END:
 ** Note
-{{{class(compact)}}}
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch"
+:END:
+#+ATTR_HTML: :class content-size dFlex-col dFlex-evenly list-lg text-sm
 - The purpose of this presentation is to show some of [[https://revealjs.com/speaker-view/][reveal.js]] and [[https://github.com/yjwen/org-reveal][org-reveal]] features.
-  - In this context a modified version of my PhD. thesis presentation was used as an example with some data modified/removed.
-
+  - In this context a modified version of my PhD. thesis presentation was used as an example with some data modified/removed.    
 - Functions
   - Arrow keys will move forward and backward the slides as well as up and down (when available).
     - Alternatively, use the control buttons on the bottom-right corner
@@ -53,14 +56,16 @@
     - '*S*' toggles speaker view
     - '*Q*' toggles pointer
     - '*T*' toggles drawing mode (works better when pointer is activated)
-    - '*Ctrl+mouse-right-click*' will zoom in/out where the pointer is 
-
+    - '*Ctrl+mouse-right-click*' will zoom in/out where the pointer is
 * Outline
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-autoslide="1500"
 :END:
 ** Outline
-{{{class(long)}}}
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch"
+:END:
+#+ATTR_HTML: :class content-size dFlex-col dFlex-evenly
 - Introduction
 - Chapter 1: RNA nuclease activity of GOI_{SMR}
   # - Shows that GOI's SMR domain can degrade RNA
@@ -73,52 +78,62 @@
  
 ** Boron (B) is an essential micronutrient for plants
 :PROPERTIES:
-:REVEAL_EXTRA_ATTR: class="top"
+:REVEAL_EXTRA_ATTR: class="stretch"
 :END:
-#+REVEAL_HTML: <br><img class="r-stretch" src="./UT/images/png/cell_wall.png"><br>
-#+ATTR_HTML: :class caption
-Modified from [[https://doi.org/10.1093/jxb/eraa042][Matthes et al. (2020)]]
+#+ATTR_HTML: :class content-size
+#+begin_col
+#+begin_text-sm
+#+ATTR_HTML: :class img-70w
+#+caption: Modified from [[https://doi.org/10.1093/jxb/eraa042][Matthes et al. (2020)]]
+[[file:UT/images/png/cell_wall.png]]
+#+end_text-sm
 
-{{{class(compact)}}}
+#+ATTR_HTML: :class text-md
 - Boron is essential for cell wall structure
 - Uptake and distribution is regulated by dedicated transporters and channels
 - NIP5;1 is a channel that mediates boron uptake
+#+end_col
+
 
 ** Regulation of /NIP5;1/  is affected by boron at the translational stage
 :PROPERTIES:
-:REVEAL_EXTRA_ATTR: class="top"
+:REVEAL_EXTRA_ATTR: class="stretch"
 :END:
-#+REVEAL_HTML: <div class="flex-box">
-{{{expand}}}
-#+REVEAL_HTML: <img src="./UT/images/png/ribo_stall_nip5.png" height="40%">
-{{{expand}}}
-{{{class(compact)}}}
+#+ATTR_HTML: :class content-size
+#+begin_col
+#+begin_text-sm
+#+ATTR_HTML: :class img-70w
+#+caption: Under elevated B ribosomes stall at 5'UTR
+[[./UT/images/png/ribo_stall_nip5.png]]
+#+end_text-sm
+
+#+ATTR_HTML: :class text-md list-md
 - /NIP5;1/ Mediates B uptake under B-limiting conditions
   - Under sufficient and elevated B its mRNA levels are reduced [[http://www.plantcell.org/content/18/6/1498][(Tanaka et al. 2006)]]
   - Ribosomes tend to stall at 5'UTR region (AUG-UAA) leading to /NIP5;1/ degradation [[http://www.plantcell.org/content/28/11/2830][(Tanaka et al. 2016)]]
   - Details about the endonucleotic cleavage and fate of degradation intermediates are unknown
-{{{expand}}}
-{{{div-end}}} 
+#+end_col
+
 ** GOI is involved in /NIP5;1/  mRNA decay
 :PROPERTIES:
-:REVEAL_EXTRA_ATTR: class="top"
+:REVEAL_EXTRA_ATTR: class="stretch"
 :END:
-#+REVEAL_HTML: <div class="flex-box">
-{{{expand}}}
+
+#+begin_mt-6
 #+begin_quote
 {{{color(red,Data not shown)}}}
 #+end_quote
-{{{expand}}}
-{{{class(long)}}}
+#+end_mt-6
+
+#+ATTR_HTML: :class box-60h dFlex-col dFlex-evenly list-md
 - GOI was found screening for plants with altered boron response
 - In a GFP-NIP5;1 population /goi/ mutants showed sustained GFP signal under mild boron concentration
   - Mutations mapped to GOI gene
   - qRT PCR showed increased levels of /NIP5;1/ under elevated B
   - Complementation with GOI restored B-responsiveness
 
-{{{div-end}}}     
 ** Questions about GOI
-{{{class(long)}}}
+#+ATTR_HTML: :class content-size dFlex-col dFlex-centered list-lg
    1) Does it have RNA-endonuclease activity?
       - Is it capable of degrading total RNA?
    2) Is GOI's activity is related to the events of ribosome stalling?
@@ -126,27 +141,37 @@ Modified from [[https://doi.org/10.1093/jxb/eraa042][Matthes et al. (2020)]]
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-autoslide="1500"
 :END:
-#+REVEAL_HTML: <h2 class="chaptert">RNA nuclease activity of GOI<sub>SMR</sub></h2>
+#+begin_text-lg
+*RNA nuclease activity of GOI_{SMR}*
+#+end_text-lg
+
 ** Features that make GOI a candidate for NIP5;1 regulation
 :PROPERTIES:
-:REVEAL_EXTRA_ATTR: class="top"
+:REVEAL_EXTRA_ATTR: class="stretch"
 :END:
-#+REVEAL_HTML: <div class="flex-box">
-{{{expand}}}
-#+REVEAL_HTML: <br><img src="./UT/images/png/goidomains.png" height="30%"><br>
-{{{expand}}}
-{{{class(compact)}}}
+
+#+ATTR_HTML: :class content-size mt-4
+#+begin_col
+#+begin_text-sm
+#+ATTR_HTML: :class img-fixed100
+#+caption: GOI known features
+[[./UT/images/png/goidomains.png]]
+#+end_text-sm
+
 #+ATTR_REVEAL: :frag (highlight-blue highlight-blue highlight-red highlight-red) :frag_idx (2 2 2 2)
+#+ATTR_HTML: :class list-md text-md
 - SMR-domain: Associated with DNA- RNA-nuclease activity
 - PAM2 motif: Allows interaction with poly-A binding proteins (RNA-interaction)
 - CUE2-like: Allows binding to Ubiquitin molecules (ribosomal subunits)
 - DUF1771: Found next to SMR-domains and considered an extension
+#+end_col
 ** Outline of experimental procedures
 :PROPERTIES:
-:REVEAL_EXTRA_ATTR: class="top"
+:REVEAL_EXTRA_ATTR: class="stretch"
 :END:
-#+REVEAL_HTML: <div class="r-stretch"></div>
+
 #+ATTR_REVEAL: :frag (none highlight-red ) :frag_idx (2 2)
+#+ATTR_HTML: :class content-size dFlex-col dFlex-end list-md 
 - Expression and purification of peptide
   - Modification of expression vectors [[#expression-vectors][{{{fa(fa-arrow-up-right-from-square)}}}]]
   - Improvement to the purification protocol [[#purification-smr][{{{fa(fa-arrow-up-right-from-square)}}}]]
@@ -156,91 +181,136 @@ Modified from [[https://doi.org/10.1093/jxb/eraa042][Matthes et al. (2020)]]
     - GOI_{SMR}: Test sample
     - SOT1_{SMR}:  Positive Control
     - Maltose Binding Protein (MBP): Negative Control
+
 *** Modification of expression vectors (pColdIV mod)
 :PROPERTIES:
-:REVEAL_EXTRA_ATTR: class="top"
+:REVEAL_EXTRA_ATTR: class="stretch"
 :CUSTOM_ID: expression-vectors
 :END:
-{{{column(,left,50%)}}}
-#+ATTR_HTML: :width 75%
-[[./UT/images/png/pcoldiv.png]]
-{{{class(compact)}}}
+ #+ATTR_HTML: :class content-size mt-5
+ #+begin_col2
+ #+begin_colLeft
+ #+begin_text-sm
+ #+ATTR_HTML: :class img-70w
+ #+caption: Takara pColdIV
+ [[./UT/images/png/pcoldiv.png]]
+ #+end_text-sm
+
+#+ATTR_HTML: :class text-md
 - Takara's pColdIV was used as backbone.
-- It posses only a multi-cloning site (MCS)
-{{{div-end}}}
-{{{column(,right,50%)}}}
-#+ATTR_HTML: :width 75%
-[[./UT/images/png/pcoldivmod.png]]
-{{{class(compact)}}}
+- It posses only a multi-cloning site (MCS) 
+ #+end_colLeft
+ #+begin_colRight
+ #+begin_text-sm
+ #+ATTR_HTML: :class img-70w
+ #+caption: pColdIV modified
+ [[./UT/images/png/pcoldivmod.png]]
+ #+end_text-sm
+
+#+ATTR_HTML: :class text-md 
 - pColdIV-mod has a MBP with a periplasmic targeting signal (ompA) followed by a TEV-recognition site, a MCS and a 7xHistidine tag for purification
-{{{div-end}}}
+ #+end_colRight
+ #+end_col2
+ 
 *** Modification of expression vectors (pRK793v3)
 :PROPERTIES:
-:REVEAL_EXTRA_ATTR: class="top"
+:REVEAL_EXTRA_ATTR: class="stretch"
 :CUSTOM_ID: expression-vectors2
 :END:
-{{{column(,left,50%)}}}
-#+ATTR_HTML: :width 75%
+
+ #+ATTR_HTML: :class content-size mt-5
+ #+begin_col2
+ #+begin_colLeft
+ #+begin_text-sm
+ #+ATTR_HTML: :class img-70w
+ #+caption: TEV-protease vector (pRK793)
 [[./UT/images/png/prk793.png]]
-{{{class(compact)}}}
-- Addgene's pRK793 is a commercial vector for the expression of TEV-protease
-{{{div-end}}}
-{{{column(,right,50%)}}}
-#+ATTR_HTML: :width 75%
+ #+end_text-sm
+  
+ #+ATTR_HTML: :class text-md
+ - Addgene's pRK793 is a commercial vector for the expression of TEV-protease
+ #+end_colLeft
+  
+ #+begin_colRight
+ #+begin_text-sm
+ #+ATTR_HTML: :class img-70w
+ #+caption: Modified pRK793
 [[./UT/images/png/prk793v3.png]]
-{{{class(compact)}}}
-- pRK793v3 was modified to include a TEV-site downstream the TEV-protease coding region and a multi-cloning site for the expression of other peptides
-{{{div-end}}}
+ #+end_text-sm
+ #+ATTR_HTML: :class text-md
+ - pRK793v3 was modified to include a TEV-site downstream the TEV-protease coding region and a multi-cloning site for the expression of other peptides
+ #+end_colRight
+ #+end_col2
+ 
 *** Purification of GOI_{SMR} and SOT1_{SMR}
 :PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch"
 :CUSTOM_ID: purification-smr
-:REVEAL_EXTRA_ATTR: class="top"
 :END:
-{{{column(,left, 70%)}}}
- [[./UT/images/png/pColdIV-mod.png]]
-{{{div-end}}}
-{{{column(,right, 30%)}}}
-{{{class(compact)}}} :id top
+
+#+ATTR_HTML: :class content-size mt-5
+#+begin_col2-65w
+#+begin_text-sm
+#+caption: SDS-PAGE of purified fractions
+[[./UT/images/png/pColdIV-mod.png]]
+#+end_text-sm
+#+ATTR_HTML: :class dFlex-col dFlex-evenly list-md
+#+begin_text-md
 - A modified pColdIV expression vector was constructed
   - MBP upstream cloning site to improve solubility
 - For the activity assay 
   - MBP-tag was removed through TEV-protease digestion (Figure left)
   - Specific fractions were obtained by gel filtration
-{{{div-end}}}
+#+end_text-md
+#+end_col2-65w
 ** GOI_{SMR} has RNA nuclease activity
 :PROPERTIES:
-:REVEAL_EXTRA_ATTR: class="top"
+:REVEAL_EXTRA_ATTR: class="stretch"
 :END:
-#+REVEAL_HTML: <div class="flex-box">
-{{{expand}}}
-#+begin_blockquote
-#+ATTR_HTML: :width 100%
-[[./UT/images/png/2020-10-13-MBP-C7SWT-S1SWT_62_125_250nM.png]]
+#+ATTR_HTML: :class content-size mt-4
+#+begin_col
+ #+begin_text-sm
+ #+caption: Total RNA nuclease assay
+ [[./UT/images/png/2020-10-13-MBP-C7SWT-S1SWT_62_125_250nM.png]]
+ #+end_text-sm
+
+#+ATTR_HTML: :class dFlex-evenly list-md text-md
+#+begin_dFlex
 - Methods:
   - Root total RNA was incubated with purified peptides for 30 min. at 25C
   - Reaction buffer (Buff) and purified MBP were used as negative controls
-#+end_blockquote
-- Dose dependent RNA nuclease activity of GOI_{SMR} was confirmed
+- Dose dependent RNA nuclease activity of GOI_{SMR} was confirmed    
+#+end_dFlex
+#+end_col
 
-{{{expand}}}  
-{{{div-end}}} 
 ** Mutations in GOI_{SMR} second motif do not affect its activity
 :PROPERTIES:
-:REVEAL_EXTRA_ATTR: class="top"
+:REVEAL_EXTRA_ATTR: class="stretch title-h5"
 :END:
-{{{toppic(./UT/images/png/2020-10-27-RNA-assay-C7SWT_C7SMut_S1SWT_MBP.png)}}}
-{{{column(,left, 50%)}}}
-#+ATTR_HTML: :height 30%
- [[./UT/images/png/smr_residues.png]]
-{{{div-end}}}
-{{{column(,left, 50%)}}}
-{{{class(compact)}}}
+
+#+ATTR_HTML: :class content-size
+#+begin_col2
+#+ATTR_HTML: :class col2-span-column
+#+begin_text-sm
+#+caption: Total RNA nuclease assay
+[[./UT/images/png/2020-10-27-RNA-assay-C7SWT_C7SMut_S1SWT_MBP.png]]
+#+end_text-sm
+
+#+ATTR_HTML: :class box-30h dFlex-col dFlex-centered
+#+begin_text-sm
+#+caption: Alignment of residues
+[[./UT/images/png/smr_residues.png]]
+#+end_text-sm
+
+#+ATTR_HTML: :class list-md
+#+begin_text-md
 - GOI_{SMR}  with mutations in the second motif showed increased activity
 - The 2nd  motif was shown to be important in SOT1 but not in CUE2
 - GOI_{SMR} domain is more similar to CUE2_{SMR} than SOT1_{SMR}
-{{{div-end}}}
+#+end_text-md
+#+end_col2
 ** Chapter conclusions
-{{{class(long)}}}
+#+ATTR_HTML: :class content-size dFlex-col dFlex-centered list-lg
 - It was shown that GOI_{SMR} domain is capable of degrading RNA
 - Out of the two putative catalytic motifs, the second does not seem to be necessary for the RNA-nuclease activity
 - This is unlike a previous report on Arabidopsis’ SOT1 but similar to a report on Yeast protein CUE2
@@ -248,29 +318,45 @@ Modified from [[https://doi.org/10.1093/jxb/eraa042][Matthes et al. (2020)]]
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-autoslide="1500"
 :END:
-#+REVEAL_HTML: <h2 class="chaptert">Identification of GOI and boron condition-dependent mRNA degradation intermediates</h2>
+#+begin_text-lg
+*Identification of GOI and boron condition-dependent mRNA degradation intermediates*
+#+end_text-lg
 ** Outline of experimental procedures
 :PROPERTIES:
-:REVEAL_EXTRA_ATTR: class="top"
+:REVEAL_EXTRA_ATTR: class="stretch"
 :END:
-#+REVEAL_HTML: <img class="r-stretch" src="./UT/images/png/degradome_method.png">
+#+ATTR_HTML: :class img-80w
+[[./UT/images/png/degradome_method.png]]
 *** Overview of pyDegradome analysis
 :PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch"
 :CUSTOM_ID: pydeg-analysis
-:REVEAL_EXTRA_ATTR: class="top"
 :END:
-#+REVEAL_HTML: <img class="r-stretch" src="./UT/images/png/pydeg_method.png">
-{{{class(compact)}}}
+
+#+ATTR_HTML: :class content-size
+#+begin_col
+#+begin_text-sm
+#+ATTR_HTML: :class img-80w
+[[./UT/images/png/pydeg_method.png]]
+#+end_text-sm
+
+#+ATTR_HTML: :class list-md
+#+begin_text-md
 - pyDegradome [[https://dx.plos.org/10.1371/journal.ppat.1005305][(Gaglia et al. 2015)]] aims to find endonuclease targets by comparing samples with and without a given endonuclease.
 - Significant differences (/peaks/)  are found at the exon level.
 - Multiplicative factor and significance level are user-defined parameters
+#+end_text-md
+#+end_col
 *** pyDegradome limitations and extended classification
 :PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch"
 :CUSTOM_ID: pydeg-limitations
-:REVEAL_EXTRA_ATTR: class="top"
 :END:
-{{{column(,left,50%)}}}
-{{{class(long)}}}
+
+#+ATTR_HTML: :class content-size
+#+begin_col2
+#+ATTR_HTML: :class dFlex-col dFlex-evenly list-lg
+#+begin_text-md
 - Limitations
   - It can identify many significant signals (peaks) which may not be relevant at the transcript level
 - Extended classification
@@ -278,210 +364,280 @@ Modified from [[https://doi.org/10.1093/jxb/eraa042][Matthes et al. (2020)]]
     1. Within sample: Classification/Filtering 
     2. Between samples: Classification
   - Result: Most peaks were removed
-{{{div-end}}}
-{{{column( flex-box,right,50%)}}}
-#+REVEAL_HTML:<img class="expand" src="./UT/images/png/pydeg_limitationsv2.png">
-{{{div-end}}}
+#+end_text-md
+
+#+begin_text-sm
+[[./UT/images/png/pydeg_limitationsv2.png]]
+#+end_text-sm
+#+end_col2
 *** Extended classification 1 (Filtering & classification)
 :PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch"
 :CUSTOM_ID: classification-1
-:REVEAL_EXTRA_ATTR: class="top"
 :END:
-{{{column(,left,40%)}}}
-{{{class(compact)}}}
+#+ATTR_HTML: :class content-size
+#+begin_col2-65wi
+#+ATTR_HTML: :class dFlex-col dFlex-evenly list-lg
+#+begin_text-sm
 - Compares peak with reads along the transcript (test sample)
   - Category 1: Peak is the highest read and shared between replicates
   - Category 2: Peak is not highest but at least 80% as high and shared between replicates
   - Category 3: Peak is not highest but between 70-80% as high and shared between replicates
   - Category 4: Peak is not shared (significant only in one replicate). Coordinates of the significant peak are used to define those on the missing. Reads are either the highest or at least 80% as high
   - Category 0: Those peaks that can not be classified into the above categories were excluded
-{{{div-end}}}
-{{{column( flex-box,right,60%)}}}
-#+REVEAL_HTML:<img class="expand" src="./UT/images/png/pydeg-1.png">
+#+end_text-sm
 
-{{{div-end}}}
+#+begin_text-sm
+#+caption: Custom classification 1
+[[./UT/images/png/pydeg-1.png]]
+#+end_text-sm
+#+end_col2-65wi
+
 *** Extended classification 2 (Classification)
 :PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch"
 :CUSTOM_ID: classification-2
-:REVEAL_EXTRA_ATTR: class="top"
 :END:
-{{{column(,left,40%)}}}
-{{{class(compact)}}} 
+#+ATTR_HTML: :class content-size
+#+begin_col2-65wi
+#+ATTR_HTML: :class dFlex-col dFlex-evenly list-md
+#+begin_text-md
 - Compares peak with reads on the control sample
 - Averages were used to account for sample variability and reduce computation time
 - No peaks were removed
   - Category A: Ratio between average of peaks in test sample and average of the /highest read along/ control samples is higher than 1
   - Category B: For transcripts with 2 or more peaks; Ratio between test samples and control samples is higher than the /median/
   - Category C: Those that can not be classified into the above categories
+#+end_text-md
 
-{{{div-end}}}
-{{{column( flex-box,right,60%)}}}
-#+REVEAL_HTML:<img class="expand" src="./UT/images/png/pydeg-2.png">
-{{{div-end}}}
+#+begin_text-sm
+#+caption: Custom classification 2
+[[./UT/images/png/pydeg-2.png]]
+#+end_text-sm
+#+end_col2-65wi
+
 ** Mutations in GOI reduce degradation signals upstream AUG-STOP sequences in /NIP5;1/
 :PROPERTIES:
-:REVEAL_EXTRA_ATTR: class="top"
+:REVEAL_EXTRA_ATTR: class="stretch"
 :END:
-{{{column( flex-box,left,43%)}}}
-{{{class(compact)}}}
+
+#+begin_col2-65wi-span-rowLast
+#+ATTR_HTML: :class box-40h dFlex-col dFlex-centered list-lg
+#+begin_text-md
 - After filtering 2 significant peaks were found on NIP5;1
 - One at 5’UTR and the other at 3’UTR
 - Both are located upstream (<20nt) of AUG-STOP
-{{{expand}}}
-#+ATTR_HTML: :width 70%
+#+end_text-md
+
+#+ATTR_HTML: :class box-40h dFlex-col dFlex-end
+#+begin_text-sm
 [[./UT/images/png/legend-nip5.png]]
-{{{div-end}}}
-{{{column(,right, 2%)}}}
-{{{div-end}}}
-{{{column( flex-box,right, 55%;)}}}
-#+REVEAL_HTML:<img class="expand" src="./UT/images/png/nip5-5utr.png">
-{{{div-end}}}
+#+end_text-sm  
+
+#+begin_text-sm
+#+ATTR_HTML: :class img-70w
+#+caption: Decay plot NIP5;1 5'UTR
+[[./UT/images/png/nip5-5utr.png]]
+#+end_text-sm
+#+end_col2-65wi-span-rowLast
+
 *** NIP5;1 degradation signals at 3'UTR
 :PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch"
 :CUSTOM_ID: nip5-3utr-signal
-:REVEAL_EXTRA_ATTR: class="top"
 :END:
-{{{column( flex-box,left,43%)}}}
-{{{class(long)}}}
+
+#+begin_col2-65wi-span-rowLast
+#+ATTR_HTML: :class box-40h dFlex-col dFlex-centered list-lg
+#+begin_text-md
 - Peak on 3'UTR region is located upstream (<20nt) of AUG-UGA
   - AUG-STOP causes ribosome stalling  [[http://www.plantcell.org/content/28/11/2830][(Tanaka et al. 2016)]] but this was not reported before (Tanaka, unpublished)
-{{{expand}}}
-#+ATTR_HTML: :width 75% 
+#+end_text-md
+
+#+ATTR_HTML: :class box-40h dFlex-col dFlex-end
+#+begin_text-sm
 [[./UT/images/png/legend-nip5.png]]
-{{{div-end}}}
-{{{column(,right, 2%)}}}
-{{{div-end}}}
-{{{column( flex-box,right, 55%)}}}
-#+REVEAL_HTML:<img class="expand" src="./UT/images/png/nip5-3utr.png">
-{{{div-end}}}
+#+end_text-sm
+
+#+begin_text-sm
+#+ATTR_HTML: :class img-70w
+#+caption: Decay plot NIP5;1 3'UTR
+[[./UT/images/png/nip5-3utr.png]]
+#+end_text-sm
+#+end_col2-65wi-span-rowLast
 ** CAGEseq data suggest that B effects on /NIP5;1/ are specifically mediated by GOI
 :PROPERTIES:
-:REVEAL_EXTRA_ATTR: class="top"
+:REVEAL_EXTRA_ATTR: class="stretch"
 :END:
-#+REVEAL_HTML: <div class="flex-box">
-{{{expand}}}
-{{{class(long)}}}
+
+#+ATTR_HTML: :class content-size dFlex-col dFlex-centered
+#+begin_list-lg
 - CAGEseq:
   - RNAseq variant: Estimates intact mRNA species 
 - Comparison CAGEseq vs. Degradome
   - Assumption: Increases in Degradome signals should be accompanied by a reduction of CAGEseq estimates *if* there is a direct/specific effect of GOI/boron
-{{{expand}}}
-{{{div-end}}}   
+#+end_list-lg
+
 *** CAGEseq results (Boron effect)
 :PROPERTIES:
 :reveal_background_iframe: ./UT/html/cage_v_degradome_miRNA_B_effect_0_99_3.html
 :HTML_CONTAINER_CLASS: iframe
 :CUSTOM_ID: cageb
-:reveal_extra_attr: background-color: var(--r-bgon);  border-radius: 20px; padding:10px
 :END:
 #+begin_notes
 CAGEseq data was used as an estimate of intact mRNA species and compared against the list obtained from the degradome analysis.
 #+end_notes
+
+#+begin_text-md
 #+begin_quote
 Fold change in CAGEseq abundance was measured between two boron conditions (0.3 and 100\mu{}M) and compared between two different genotypes (Col-0 and /goi/).
 
 mRNAs with a registered 2> fold change in a Col-0 background (and almost no change in the /goi/ background, $x<0.5$) were considered as potential candidates of GOI-mediated regulation (red dots {{{fa-cust(fa-circle,#E41A1C,0.6em)}}}).
-{{{html(<hr>)}}}
-{{{class(notes)}}}
+
+#+begin_list-md
 - Hovering over the dots shows the mRNA name and the degradome comparison where that mRNA was found.
 - To show/hide this box click on the {{{fa(fa-message)}}} icon on the bottom left corner 
 - To show the speaker notes click the letter *S*
+#+end_list-md
 #+end_quote
+#+end_text-md
+
 *** CAGEseq results (Genotype effect)
 :PROPERTIES:
 :reveal_background_iframe: ./UT/html/cage_v_degradome_miRNA_G_effect_0_99_3.html
 :HTML_CONTAINER_CLASS: iframe
 :CUSTOM_ID: cageg
-:reveal_extra_attr: background-color: var(--r-bgon);  border-radius: 20px; padding:10px
 :END:
+#+begin_text-md
 #+begin_quote
 Fold change in CAGEseq abundance was measured between two genotypes (Col-0 and /goi/) and compared between in two boron concentrations (0.3 and 100\mu{}M) .
 
 mRNAs with a registered 2> fold change under either boron concentration were considered as potential candidates of GOI-mediated regulation (red dots {{{fa-cust(fa-circle,#E41A1C,0.6em)}}}).
-{{{html(<hr>)}}}
-{{{class(notes)}}}
+#+begin_list-md
 - Note the magnitude of change for NIP5;1 under 100\mu{}M B (upper right section).
 - To show/hide this box click on the {{{fa(fa-message)}}} icon on the bottom left corner 
+#+end_list-md
 #+end_quote
+#+end_text-md
+
 ** Degradation intermediates at exon-junction regions
 :PROPERTIES:
-:REVEAL_EXTRA_ATTR: class="top"
+:REVEAL_EXTRA_ATTR: class="stretch"
 :END:
-#+REVEAL_HTML: <br><img class="r-stretch" src="./UT/images/png/ejc.png"><br>
-{{{class(compact)}}}
+
+#+ATTR_HTML: :class mt-4
+#+begin_text-sm
+#+caption: Accumulation of degradation fragments at exon-junctions
+[[./UT/images/png/ejc.png]]
+#+end_text-sm
+
+#+ATTR_HTML: :class list-lg box-40h dFlex-col dFlex-evenly
+#+begin_text-md
 - Premature stops can lead to Nonsense-Mediated Decay
 - If it happens before the 1st round of translation degradation intermediates accumulate at sites where exon junction complexes (EJC) bind, 25-30nt upstream exon-junction
 - Abundance of degradation intermediates is reduced in /xrn4/ mutants
+#+end_text-md
+
 *** Mutations in XRN4 and GOI affect the accumulation of degradation intermediates close to exon-junctions
 :PROPERTIES:
 :reveal_background_iframe: ./UT/html/degradome_signal_exon-junction_0_99_3.html
-:HTML_CONTAINER_CLASS: iframe
+:HTML_CONTAINER_CLASS: iframe title-h5
 :CUSTOM_ID: ribostall
-:reveal_extra_attr: background-color: var(--r-bgon);  border-radius: 20px; padding:10px
 :END:
+#+begin_text-md
 #+begin_quote
 mRNA degradation intermediates accumulate in the EJC binding region (20-25nt upstream the exon-junction) in different genotypes exposed to 100\mu{}M B.
 
 The accumulation is reduced in the absence of the exonuclease XRN4 which degrades exposed mRNAs until it reaches an obstacle (/e.g./ EJC).
 
 A greater reduction is observed in the absence of GOI which could support its putative endonuclease activity
-{{{html(<hr>)}}}
-{{{class(notes)}}}
+#+begin_list-md
 - Clicking on the legend elements will toggle its visibility
 - To show/hide this box click on the {{{fa(fa-message)}}} icon on the bottom left corner 
+#+end_list-md
 #+end_quote
+#+end_text-md
+
 ** Known miRNA398-mediated degradation intermediates are reduced in /goi/ mutants
 :PROPERTIES:
-:REVEAL_EXTRA_ATTR: class="top"
+:REVEAL_EXTRA_ATTR: class="stretch"
 :END:
-{{{column( flex-box,left, 43%)}}}
-{{{class(compact)}}}
+
+#+begin_col2-65wi-span-rowLast
+#+ATTR_HTML: :class box-60h dFlex-col dFlex-centered list-lg
+#+begin_text-md
 - miRNA398 is a stress responsive gene [[https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1399-3054.2011.01477.x][(Zhu et al. 2011)]]
   - Associated stresses:  Oxidative, Water, Salt, others.
   - Known targets:  Cu/Zn SOD (CSD1, 2 and 3)
 - Accumulation of reads in CSD2 were unaffected in /xnr4-6/ mutants [[http://www.plantcell.org/content/32/4/904][(Lee et al. 2020)]]
 - No peak was found in /goi xnr4-6/ double mutant
-{{{expand}}}
-#+ATTR_HTML: :width 75%
+#+end_text-md
+
+#+ATTR_HTML: :class box-20h dFlex-col dFlex-end
+#+begin_text-sm
 [[./UT/images/png/legend-csd2.png]]
-{{{div-end}}}
-{{{column(,right, 2%)}}}
-{{{div-end}}}
-{{{column( flex-box,right, 55%)}}}
-#+REVEAL_HTML:<img class="expand" src="./UT/images/png/csd2.png">
-{{{div-end}}}
+#+end_text-sm  
+
+#+begin_text-sm
+#+ATTR_HTML: :class img-70w
+#+caption: Decay plot CSD2
+[[./UT/images/png/csd2.png]]
+#+end_text-sm
+#+end_col2-65wi-span-rowLast
 
 ** Chapter conclusions
-{{{class(long)}}}
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch"
+:END:
+
+#+ATTR_HTML: :class content-size dFlex-col list-lg
+#+begin_dFlex-evenly
 - Post pyDegradome classification improved the list of degradation signals detected on candidate genes
 - Degradation signals on /NIP5;1/ were dependent on GOI and found closer to AUG-STOP sequences. This suggest a link between GOI's endonuclease action and ribosome stalling.
 - Comparison between Degradome and CAGEseq data point to a specific regulation by GOI in the context of increases in boron concentration
 - Focus on degradation signals around exon-junctions suggest a novel link between miRNA398 and GOI
+#+end_dFlex-evenly
+
 ** General conclusions
-{{{class(long)}}}
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch"
+:END:
+
+#+ATTR_HTML: :class content-size dFlex-col list-lg
+#+begin_dFlex-evenly
 1. Is it capable of degrading total RNA??
    - Evidence of that GOI_{SMR} had RNA-nuclease activity was presented
 
 2. Is GOI's activity is related to the events of ribosome stalling?
    - Degradation intermediates on NIP5;1 were found close to AUG-STOP sequences  known to be associated with ribosome stalling; this in a GOI-dependent manner.
+#+end_dFlex-evenly
 *** Future directions
 :PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch"
 :CUSTOM_ID: future-directions
 :END:
-{{{class(long)}}}
+#+ATTR_HTML: :class content-size dFlex-col list-lg
+#+begin_dFlex-evenly
 - RNA-endonuclease activity remains to be proved:
   - Use of specific probes: Flourescent-based method
   - Expression in heterologous systems (e.g. Yeast)
 - Confirmation through RACE-PCR is needed (Initial attempts suggest these are true signals)
+#+end_dFlex-evenly  
 *** 5'RACE preliminary attempts
 :PROPERTIES:
 :CUSTOM_ID: 5race
-:REVEAL_EXTRA_ATTR: class="top"
+:REVEAL_EXTRA_ATTR: class="stretch"
 :END:
-#+ATTR_HTML: :width 75%
+#+begin_col
+#+begin_text-sm
+#+ATTR_HTML: :class img-70w
+#+caption: 5'RACE amplification of NIP5;1 degradation fragment
 [[./UT/images/png/test_5race.png]]
+#+end_text-sm
 
-{{{class(compact)}}}
+#+ATTR_HTML: :class list-lg
+#+begin_text-md
 - Amplification of /NIP5;1/ degradation intermediates from Col-0 plants exposed to two concentration of boron.
 - Expected products: Transcription start: 710 and AUG-STOP: 274bp
-
+#+end_text-md
+#+end_col
