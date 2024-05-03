@@ -66,6 +66,12 @@
     flex-direction: column;
 }
 
+.reveal .dFlex-col-default {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
 .reveal .dFlex-row {
     display: flex;
     gap: 2em;

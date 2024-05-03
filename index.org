@@ -14,11 +14,11 @@
 # #+Creator: Laboratory of Plant Nutrition and Fertilizers
 #+Date: 2022-02-07
 
-#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js@5.1.0
 #+REVEAL_HLEVEL: 2
 #+REVEAL_HEAD_PREAMBLE: <meta name="description" content="Utokyo PhD Thesis Presentation">
 #+REVEAL_POSTAMBLE: <p>Created by ssl</p>
-#+REVEAL_INIT_OPTIONS: width:1200, height:800, minScale:0.2, maxScale:2.5, transition: 'fade', progress:true, history:true, center:true, mouseWheel:false, menu:{themes:true, transitions:true, markers:true, custom: false, hideMissingTitles:true}, customcontrols:{controls:[{id:'toggle-overview', title:'Toggleoverview(O)', icon:'<i class="fa fa-th"></i>', action:'Reveal.toggleOverview();'}, {icon:'<i class="fa fa-message"></i>', title:'Toggle iframe legend', action:'ilegend()'}]}, pointer: {key: "q", color: "red", pointerSize: 16, alwaysVisible: false, tailLength: 10}
+#+REVEAL_INIT_OPTIONS: width:1200, height:800, minScale:0.2, maxScale:2.5, transition: 'fade', progress:true, history:true, center:true, mouseWheel:false, menu:{themes:true, themesPath:'https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/', transitions:true, markers:true, custom: false, hideMissingTitles:true}, customcontrols:{controls:[{id:'toggle-overview', title:'Toggleoverview(O)', icon:'<i class="fa fa-th"></i>', action:'Reveal.toggleOverview();'}, {icon:'<i class="fa fa-message"></i>', title:'Toggle iframe legend', action:'ilegend()'}]}, pointer: {key: "q", color: "red", pointerSize: 16, alwaysVisible: false, tailLength: 10}
 #+REVEAL_THEME: dracula
 #+OPTIONS: num:nil toc:nil
 
